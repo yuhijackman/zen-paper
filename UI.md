@@ -13,3 +13,8 @@ TailwindCSS
 - Use a consistent color scheme
 - Use a consistent layout'
 
+## Colors
+Primary Color: #47A3DB (Medium Blue - Main body of the crane and brushstroke)
+Secondary Color: #226797 (Dark Blue - Outlines, beak, crown, and glasses)
+Accent Color: #81C3F1 (Light Blue - Highlights on the wings and body)
+Neutral/Background Color: #FFFFFF (White - Eyes and background)

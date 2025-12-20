@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./index.css";
+import logo from "./assets/zen-paper-logo.png";
 import { TextArea } from "./components/TextArea";
 import { Toggle } from "./components/Toggle";
 import { generatePdf } from "./lib/generator";
@@ -30,18 +31,19 @@ function App() {
 	};
 
 	return (
-		<div className="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8 bg-[#fcf9f7]">
+		<div className="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8 bg-white">
 			<div className="max-w-3xl w-full space-y-8">
-				<header className="text-center">
-					<h1 className="text-5xl font-bold text-orange-900 tracking-tight mb-2">
+				<header className="flex flex-col items-center text-center">
+					<img src={logo} alt="ZenPaper Logo" className="w-24 h-24 mb-4 object-contain" />
+					<h1 className="text-5xl font-bold text-secondary tracking-tight mb-2">
 						ZenPaper
 					</h1>
-					<p className="text-orange-600 font-medium italic">
+					<p className="text-primary font-medium italic">
 						Transform your thoughts into beautiful documents
 					</p>
 				</header>
 
-				<main className="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-orange-100/50 space-y-8 border border-orange-50">
+				<main className="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-accent/20 space-y-8 border border-accent/20">
 					<div className="flex justify-center">
 						<Toggle mode={mode} onChange={setMode} />
 					</div>
@@ -49,7 +51,7 @@ function App() {
 					<div className="space-y-4">
 						<label
 							htmlFor="content"
-							className="block text-sm font-semibold text-orange-400 uppercase tracking-wider ml-2"
+							className="block text-sm font-semibold text-primary uppercase tracking-wider ml-2"
 						>
 							Content
 						</label>
@@ -75,7 +77,7 @@ Once upon a time...`
 						<button
 							type="button"
 							onClick={() => setShowCss(!showCss)}
-							className="text-orange-400 text-sm font-medium hover:text-orange-500 transition-colors flex items-center gap-1 ml-2"
+							className="text-primary text-sm font-medium hover:text-secondary transition-colors flex items-center gap-1 ml-2"
 						>
 							{showCss ? "− Hide Custom Styles" : "+ Add Custom Styles (CSS)"}
 						</button>
@@ -84,7 +86,7 @@ Once upon a time...`
 							<TextArea
 								value={customCss}
 								onChange={setCustomCss}
-								placeholder="h1 { color: #c2410c; } p { font-size: 12px; }"
+								placeholder="h1 { color: #47A3DB; } p { font-size: 12px; }"
 								className="h-32 text-sm font-mono border-dashed"
 							/>
 						)}
@@ -99,8 +101,8 @@ Once upon a time...`
                 px-12 py-5 rounded-full text-xl font-bold shadow-lg transition-all transform hover:scale-[1.02] active:scale-[0.98]
                 ${
 									isGenerating || !input.trim()
-										? "bg-orange-100 text-orange-300 cursor-not-allowed shadow-none"
-										: "bg-orange-400 text-white hover:bg-orange-500 shadow-orange-200"
+										? "bg-accent/20 text-accent cursor-not-allowed shadow-none"
+										: "bg-primary text-white hover:bg-secondary shadow-accent/40"
 								}
               `}
 						>
@@ -136,7 +138,7 @@ Once upon a time...`
 					</div>
 				</main>
 
-				<footer className="text-center text-orange-200 text-sm font-medium">
+				<footer className="text-center text-accent text-sm font-medium">
 					Crafted with love for writers.
 				</footer>
 			</div>

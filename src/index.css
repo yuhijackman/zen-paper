@@ -4,8 +4,8 @@
 
 :root {
 	font-family: "Inter", system-ui, -apple-system, sans-serif;
-	background-color: #fcf9f7; /* Very soft peach/cream background */
-	color: #4a4a4a;
+	background-color: #FFFFFF;
+	color: #226797; /* Secondary color for text */
 }
 
 body {
