@@ -34,7 +34,11 @@ function App() {
 		<div className="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8 bg-white">
 			<div className="max-w-3xl w-full space-y-8">
 				<header className="flex flex-col items-center text-center">
-					<img src={logo} alt="ZenPaper Logo" className="w-24 h-24 mb-4 object-contain" />
+					<img
+						src={logo}
+						alt="ZenPaper Logo"
+						className="w-24 h-24 mb-4 object-contain"
+					/>
 					<h1 className="text-5xl font-bold text-secondary tracking-tight mb-2">
 						ZenPaper
 					</h1>
